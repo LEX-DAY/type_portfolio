@@ -231,8 +231,6 @@ html, body {
 /*========SKILLS=======*/
 
 .project__skills {
-    margin-top: 100px;
-    margin-bottom: 60px;
     color: #171718;
     font-family: 'DM Sans';
     font-style: normal;
@@ -244,7 +242,7 @@ html, body {
     font-weight: 700;
     font-size: 60px;
     color: #5C62EC;
-    margin: 120px;
+    margin: 100px;
 }
 
 .type__skill { 
@@ -256,10 +254,58 @@ html, body {
 .skills {
     font-weight: 400;
     font-size: 18px; 
-    margin-bottom: 100px; 
+    margin-bottom: 70px; 
 }
 
 /*========/SKILLS=========*/
+
+
+/*========CONTACT=======*/
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+
+.project__contacts{
+    
+    color: #171718;
+    font-family: 'DM Sans';
+    font-style: normal;
+    text-align: center;
+    letter-spacing: -0.5px;    
+}
+
+.contacts__title {
+    font-weight: 700;
+    font-size: 60px;
+    color: #5C62EC;
+    margin: 50px;
+}
+
+.type__contacts { 
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contacts__location {
+    font-weight: 400;
+    font-size: 18px; 
+    margin-bottom: 30px; 
+}
+
+.contact__telegram {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+/*========/CONTACT=========*/
 
 
 /*=======FOOTER========*/
