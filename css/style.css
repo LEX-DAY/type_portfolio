@@ -10,6 +10,9 @@ font-family: 'Poppins', sans-serif;
 html, body {
     font-family: 'DM Sans', sans-serif;
     letter-spacing: -0.5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /*=======container=========*/
@@ -33,7 +36,7 @@ html, body {
 
 .nav__row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 30px;
     row-gap: 20px;
@@ -41,7 +44,8 @@ html, body {
 }
 
 .nav__logo {
-    
+    margin-right: auto;
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -82,6 +86,44 @@ html, body {
     position: relative;
     top: 1px;
 }
+
+.dark__mode_btn {
+    order: 1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 51px;
+    height: 26px;
+    padding: 5px;
+
+    background-color: #272727;
+    border-radius: 50px;
+}
+
+.dark__mode_btn::before {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: #fff;
+
+    transition: left 0.2s ease-in;
+}
+
+.dark__mode_btn--active::before {
+    left: 26px;
+}
+
+.dark__mode_btn_icon {
+    position: relative;
+    z-index: 9;
+}
+
+
 /*===========\NAVIGATION============*/
 
 /*============HEADER==============*/
@@ -163,6 +205,10 @@ html, body {
 /*===========/HEADER=============*/
 
 /*=======SECTION========*/
+
+.section {
+    margin-bottom: 30px;
+}
 
 .section__title {
     margin-top: 70px;
@@ -298,11 +344,12 @@ html, body {
 }
 
 .contact__telegram {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
     max-width: 100%;
     box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
 }
 
 /*========/CONTACT=========*/
@@ -311,7 +358,7 @@ html, body {
 /*=======FOOTER========*/
 .footer {
     background-color: #171718;
-    margin-top: 70px;
+    margin-top: auto;
 }
 
 .footer__social {
@@ -342,6 +389,16 @@ html, body {
 
     color: #FFFFFF;
 }
-/*========/FOOTER*=======/
+/*========/FOOTER*=======*/
 
 
+@media (max-width: 632px) {
+    
+    .nav__row {
+        justify-content: space-between;
+    }
+    .dark__mode_btn {
+        order: 0;
+    }
+
+}
