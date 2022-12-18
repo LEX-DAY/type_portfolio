@@ -6,13 +6,38 @@
 font-family: 'DM Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
+:root {
+    --black: #212122;
+    --black-B: #0c0c0c7e;
+    --white: #fff;
+    --fiolet: #5C62EC;
+    --page-bg: var(--white);
+    --text-color: var(--black);
+    --page-blck: var(--white);
+    --text-title: var(--fiolet);
+}
+
+
+/*=====DARK =====*/
+.dark {
+    --page-bg: var(--black);
+    --text-color: var(--white);
+    --page-blck: var(--black-B);
+    --text-title: var(--white);
+}
+
+/*=====/DARK =====*/
 
 html, body {
-    font-family: 'DM Sans', sans-serif;
-    letter-spacing: -0.5px;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
+
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.5px;
+
+    background-color: var(--page-bg);
+    color: var(--text-color)
 }
 
 /*=======container=========*/
@@ -207,7 +232,8 @@ html, body {
 /*=======SECTION========*/
 
 .section {
-    margin-bottom: 30px;
+    background-color: var(--page-bg);
+    color: var(--text-color)
 }
 
 .section__title {
@@ -223,17 +249,18 @@ html, body {
     text-align: center;
     letter-spacing: -0.5px;
 
-    color: #5C62EC;
+    color: var(--text-title);
 }
 
 .section__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 .section__item {
-    
+    background-color: var(--page-blck);
     margin: 0px 10px;
     width: 370px;
     height: 349px;
@@ -269,7 +296,7 @@ html, body {
     line-height: 130%;    
     letter-spacing: -0.5px;
     
-    color: #171718;
+    color: var(--text-color)
 }
 /*========/SECTION=========*/
 
@@ -277,7 +304,8 @@ html, body {
 /*========SKILLS=======*/
 
 .project__skills {
-    color: #171718;
+    background-color: var(--page-bg);
+    color: var(--text-color);
     font-family: 'DM Sans';
     font-style: normal;
     text-align: center;
@@ -316,8 +344,8 @@ html, body {
 }
 
 .project__contacts{
-    
-    color: #171718;
+    background-color: var(--page-bg);
+    color: var(--text-color);
     font-family: 'DM Sans';
     font-style: normal;
     text-align: center;
@@ -359,6 +387,7 @@ html, body {
 .footer {
     background-color: #171718;
     margin-top: auto;
+    padding-top: auto;
 }
 
 .footer__social {
